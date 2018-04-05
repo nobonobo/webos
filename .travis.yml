@@ -4,8 +4,8 @@ language: c
 services:
 - docker-ce
 script:
-- docker build --rm -t localhost/webos .
-- docker create --name webos localhost/webos
+- docker build --rm -t $DOCKER_USERNAME/webos .
+- docker create --name webos $DOCKER_USERNAME/webos
 - docker cp webos:/build-webosBUILD/work/raspberrypi3-webos-linux-gnueabi/webos-image/ images/
 - docker rm webos
 deploy:
