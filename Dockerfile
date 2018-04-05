@@ -13,6 +13,6 @@ USER builder
 WORKDIR /home/builder
 RUN git clone https://github.com/webosose/build-webos.git
 WORKDIR /home/builder/build-webos
-RUN scripts/prerequisites.sh
+RUN sudo scripts/prerequisites.sh
 RUN ./mcf -p 0 -b 0 raspberrypi3
 RUN make webos-image || rm -rf ~/.node-gyp/ && make webos-image
