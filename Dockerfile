@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:14.04
 
 RUN apt update
 RUN apt upgrade --yes
