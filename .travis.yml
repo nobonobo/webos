@@ -5,7 +5,7 @@ services:
 script:
 - docker build --rm -t $DOCKER_USERNAME/webos .
 - docker create --name webos $DOCKER_USERNAME/webos
-- docker cp webos:/build-webosBUILD/work/raspberrypi3-webos-linux-gnueabi/webos-image/ images/
+- docker cp webos:/home/builder/build-webosBUILD/work/raspberrypi3-webos-linux-gnueabi/webos-image/ images/
 - docker rm webos
 deploy:
   provider: releases
